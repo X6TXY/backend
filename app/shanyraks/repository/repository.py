@@ -5,7 +5,7 @@ from bson.objectid import ObjectId
 from pymongo.database import Database
 
 
-class TweetRepository:
+class ShanyraksRepository:
     def __init__(self, database: Database):
         self.database = database
 
@@ -17,15 +17,3 @@ class TweetRepository:
         }
 
         self.database["tweets"].insert_one(payload)
-
-    def get_tweet_by_user_id(self, user_id: str) -> List[dict]:
-        tweets = self.database["tweets"].find(
-            {
-                "user_id": ObjectId(user_id),
-            }
-        )
-        result = []
-        for tweet in tweets:
-            result.append(tweet)
-
-        return result

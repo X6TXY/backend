@@ -1,9 +1,8 @@
 from typing import Any
 
+from app.utils import AppModel
 from fastapi import Depends
 from pydantic import Field
-
-from app.utils import AppModel
 
 from ..adapters.jwt_service import JWTData
 from ..service import Service, get_service
