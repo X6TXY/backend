@@ -22,7 +22,7 @@ env = Config()
 
 # FastAPI configurations
 fastapi_config: dict[str, Any] = {
-    "title": "baha API",
+    "title": "Ban API",
 }
 
 mongo_url = (

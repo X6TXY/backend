@@ -22,4 +22,4 @@ app.add_middleware(
 )
 
 app.include_router(auth_router, prefix="/auth", tags=["Auth"])
-app.include_router(shanyraks_router, prefix="/shanyraks", tags=["Shanyraks"])
+app.include_router(shanyraks_router, prefix="/shanyrak", tags=["Shanyrak"])
